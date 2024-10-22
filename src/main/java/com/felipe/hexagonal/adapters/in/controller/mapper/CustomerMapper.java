@@ -2,6 +2,7 @@ package com.felipe.hexagonal.adapters.in.controller.mapper;
 
 
 import com.felipe.hexagonal.adapters.in.controller.request.CustomerRequest;
+import com.felipe.hexagonal.adapters.in.controller.response.CustomerResponse;
 import com.felipe.hexagonal.application.core.domain.Customer;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
@@ -13,4 +14,6 @@ public interface CustomerMapper {
     @Mapping(target = "address", ignore = true)
     @Mapping(target = "isValidCpf", ignore = true)
     Customer toCustomer(CustomerRequest customerRequest);
+
+    CustomerResponse toCustomerResponse(Customer customer);
 }
