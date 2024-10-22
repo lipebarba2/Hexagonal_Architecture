@@ -3,7 +3,7 @@ package com.felipe.hexagonal.adapters.out.client.response;
 import lombok.Data;
 
 @Data
-public class AdressResponse {
+public class AddressResponse {
 
     private String street;
 
